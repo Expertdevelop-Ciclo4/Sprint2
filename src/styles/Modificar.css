@@ -1,0 +1,16 @@
+.title{
+    text-align: center;
+    background-color: gray;
+}
+.productoGeneral {
+    width: 40%;
+}
+.imagenProducto img {
+
+    width: 50%;
+
+}
+.imagenProducto {
+    width: 30%;
+    text-align: center;
+}

@@ -1,24 +1,68 @@
-import logo from './logo.svg';
-import './App.css';
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Link
+} from "react-router-dom";
+import Lista from "./componentes/ListaProductos";
+import Modificar from "./componentes/Modificar"
+import Ventas from "./componentes/Ventas"
+import Carrito from "./componentes/Carrito"
+import "./styles/Navbar.css"
+import Logo from "./pcgamer2.png";
+import ModificarProduct from "./componentes/Modificarproduct";
+import AdministracionProductos from "./componentes/AdministracionProductos";
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <Router>
+      <div class="general">
+      <img src={Logo} alt=""/>
+      <hr/>
+      <nav>
+        <div >
+        <ul >
+          <li className="navbarpri">
+            <Link class="buttonul" to="/lista">Lista productos</Link>
+          </li>
+          <li className="navbarpri">
+            <Link class="buttonul" to="/modificar">Modificar productos</Link>
+          </li>
+          <li className="navbarpri">
+            <Link class="buttonul" to="/ventas">Lista ventas</Link>
+          </li>
+          <li className="navbarpri">
+            <Link class="buttonul" to="/carrito">Carrito</Link>
+          </li>
+          <li className="navbarpri">
+            <Link class="buttonul" to="/administracion">Administracion de productos</Link>
+          </li>
+        </ul>
+        </div>
+      </nav>
+      <Switch>
+        
+        <Route exact path="/modificar">
+            <Modificar></Modificar>
+            <ModificarProduct/>
+        </Route>
+        <Route exact path="/ventas">
+            <Ventas></Ventas>
+        </Route>
+        <Route exact path="/carrito">
+            <Carrito></Carrito>
+        </Route>
+        <Route exact path="/lista">
+            <Lista></Lista>
+        </Route>
+        <Route exact path="/administracion">
+            <AdministracionProductos></AdministracionProductos>
+        </Route>
+      </Switch>
     </div>
+    </Router>
+    
   );
 }
 

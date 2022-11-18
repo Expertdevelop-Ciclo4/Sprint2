@@ -1,0 +1,53 @@
+
+*{
+    margin: 0px;
+    padding: 0px;
+}
+.wrapper {
+    display: grid;
+    grid-auto-rows: minmax(100px, auto);
+}
+
+
+ul {
+    list-style-type: none;
+    text-align: center
+}
+  
+.navbarpri {
+    background-color:#256D85;
+    border: #D7C8B6 2px solid;
+    display:inline-block;
+    margin-right:inherit;
+    width: 20%;
+    height: 60px;
+    border-radius: 30px;
+  }
+
+img {
+    width: 100%;
+    height: 10%;
+}
+.buttonul {
+    color: white;
+    text-decoration: none;
+
+    font-size: 25px;
+}
+li:hover {
+
+    background-color: gray;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
